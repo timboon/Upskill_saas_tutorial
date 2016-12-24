@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
      redirect_to new_contact_path
     else 
       #full messages makes rails turn them into sentences, join links them together using the , and space. errors saved in array
-      flash[:error]=@contact.errors.full_messages.join(", ")
+      flash[:danger]=@contact.errors.full_messages.join(", ")
       redirect_to new_contact_path
     end
   end
