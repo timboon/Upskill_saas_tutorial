@@ -21,6 +21,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   
 # Private means this function can only be used in this controller file
 # hides the function from the public
+# select_plan stops users from manipulating the params in the url
+# checks to see if plan == 1 or 2 otherwise redirect to home page
 
   private
     def select_plan
