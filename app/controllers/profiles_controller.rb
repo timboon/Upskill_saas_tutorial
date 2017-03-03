@@ -11,7 +11,6 @@ class ProfilesController < ApplicationController
     @user = User.find(param[:user_id])
     @profile = @user.build_profile(profile_params)
   
-  
   end
   
   private
